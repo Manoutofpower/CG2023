@@ -1,7 +1,7 @@
 ## Lighting and Shading (external lecture)
-### <a href='https://www.ole.bris.ac.uk/webapps/blackboard/content/contentWrapper.jsp?course_id=_257203_1&displayName=Re%2FPlay%20Collections&href=%2Fwebapps%2Fblackboard%2Fexecute%2Fblti%2FlaunchPlacement%3Fblti_placement_id%3D_3169_1%26course_id%3D_257203_1%26mode%3Dcpview%26wrapped%3Dtrue' target='_blank'> Weekly Briefing ![](../../resources/icons/briefing.png) </a>
-### Task 1: Introduction
- <a href='01%20Introduction/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
+### <a href='https://mediasite.bris.ac.uk/Mediasite/Play/9fdeab3be07f480c93df3ee4e2f37f1f1d' target='_blank'> Weekly Briefing ![](../../resources/icons/briefing.png) </a>
+### Task 1: Introduction 03.36
+ <a href='01%20Introduction%2003.36/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
 
 In this workbook we explore some of the more advanced aspects of model rendering. In particular, we will focus on the use of various lighting and shading effects to make our renders look more realistic and aesthetically appealing.
 
@@ -15,8 +15,8 @@ This week, prompted by feedback from the mid-term review, the weekly briefing se
 
 
 # 
-### Task 2: Proximity Lighting
- <a href='02%20Proximity%20Lighting/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
+### Task 2: Proximity Lighting 09.30
+ <a href='02%20Proximity%20Lighting%2009.30/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
 
 Proximity lighting takes into account the distance of a surface from a light source. Intuitively, the closer a point on a surface is to a light, the brighter it will appear. View the animation above to gain an appreciation of the visual effect of this form of lighting. Make sure you have an understanding of how to calculate this effect from the lecture recording before attempting the practical activity described below.
 
@@ -32,8 +32,8 @@ To help you test this form of lighting and debug your code, you may wish to add 
 
 
 # 
-### Task 3: Angle of Incidence Lighting
- <a href='03%20Angle%20of%20Incidence%20Lighting/animation/segment-2.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
+### Task 3: Angle of Incidence Lighting 11.52
+ <a href='03%20Angle%20of%20Incidence%20Lighting%2011.52/animation/segment-2.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
 
 Your next task is to implement "Angle-of-Incidence" lighting. This lights a surface by considering the _orientation_ of that surface relative to the position of a light source. View the animation linked to above to gain an appreciation of the visual effect of this form of lighting.
 
@@ -49,7 +49,7 @@ Once calculated, use these angles of incidence to adjust the brightness of each 
   
 
 
-![](03%20Angle%20of%20Incidence%20Lighting/images/diffuse-lighting.png)
+![](03%20Angle%20of%20Incidence%20Lighting%2011.52/images/diffuse-lighting.png)
 
 **Hints & Tips:**  
 We need to be a bit careful - each triangles has TWO normals (the front face and the back face !). Calculating the correct normal requires us to pick the correct to triangle edges to cross product. However _which_ two edges we use will depend on the "winding order" used by the OBJ model. View <a href="resources/winding.mp4" target="_blank">this video</a> for an explanation of the concept of "winding order". You won't always know which winding was used when creating a particular model - the best advice is to just to pick two edges and try it. You will soon know if you were wrong (all your surfaces will be dark) so you can then just switch to using alternative edges. This might seem like trial and error, but this is often the way with exploratory rendering !
@@ -62,7 +62,7 @@ If you use the wrong one, you will end up lighting the back surface of your tria
 
 
 # 
-### Task 4: Specular Lighting
+### Task 4: Specular Lighting 24.44
 
 
 Your next task is to implement a "Specular" lighting effect. Review the video of the lecture to make sure you have a full grasp of the theory of this lighting technique. As with the previous tasks, you should again make use of the GLM `dot` function, as well as the surfaces normals that you calculated previously. 
@@ -74,14 +74,14 @@ You may need to move the light and/or camera to an appropriate location in the s
 The image below provides some examples of the kinds of specular highlighting effect you might expect to see for different exponent values:  
 
 
-![](04%20Specular%20Lighting/images/various-exponents.jpg)
+![](04%20Specular%20Lighting%2024.44/images/various-exponents.jpg)
 
 **Hints & Tips:**  
   
 
 
 # 
-### Task 5: Ambient Lighting
+### Task 5: Ambient Lighting 22.03
 
 
 In the real world, light bounces off objects (potentially multiple times) in order to illuminate "hard to reach" areas of a model (for example, areas that are in shadow). As you might imagine, calculating this kind of lighting (which would involve multiple bounces) would be computationally very expensive. It is possible however to implement a plausible approximation to such lighting with very little additional effort (both in terms of computational power and lines of code).
@@ -89,11 +89,11 @@ In the real world, light bounces off objects (potentially multiple times) in ord
 One approach to creating such "ambient" lighting is to implement a "minimum threshold" as illustrated in the image below. Compare the shadow regions of this image with those of the previous week's workbook (which included no ambient lighting). This involves the use of an IF statement (or call to the `max` function) to ensure that the brightness of any point never falls below a certain threshold level.  
 
 
-![](05%20Ambient%20Lighting/images/shadows-with-ambient.png)
+![](05%20Ambient%20Lighting%2022.03/images/shadows-with-ambient.png)
 
 # 
-### Task 6: Gouraud Shading
- <a href='06%20Gouraud%20Shading/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
+### Task 6: Gouraud Shading 35.58
+ <a href='06%20Gouraud%20Shading%2035.58/animation/segment-1.mp4' target='_blank'> ![](../../resources/icons/animation.png) </a>
 
 We finish this workbook by considering some rendering enhancements that will improve the aesthetics of your renders, with only a minimal additional performance overhead.
 
@@ -106,7 +106,7 @@ You should interpolate both Angle of Incidence and Specular lighting effects whe
 The image below illustrates the smoothing effect that can be achieved using Gouraud shading - it is important to note that both spheres shown in the diagram have the _same_ geometry (the same number of triangles). The surfaces in the sphere on the left are shaded with a flat colour, whereas the sphere on the right is rendered using Gouraud shading. Clearly the right hand sphere _looks_ a lot smoother !  
 
 
-![](06%20Gouraud%20Shading/images/gouraud.jpg)
+![](06%20Gouraud%20Shading%2035.58/images/gouraud.jpg)
 
 **Hints & Tips:**  
 One of the trickiest parts of this task is applying the _correct_ weighting to each vertex brightness. Watch the Barycentric coordinates animation closely in order to work out which vertices you need to apply `u`, `v` and `w` in order to calculate the correct brightness weightings.
@@ -117,7 +117,7 @@ The Cornell Box isn't the most useful model for testing Gouraud shading (it's ha
 
 
 # 
-### Task 7: Phong Shading
+### Task 7: Phong Shading 47.34
 
 
 Gouraud shading in fine, but it only goes so far in creating smoothly rendered model surfaces. _Phong shading_ is an even more sophisticated approach that takes shading one step further (although it can only achieve this at the cost of additional computation !). Review the lecture recording in order to ensure you have a good understanding of Phong Shading, then adapt your renderer to make use of this more sophisticated approach. 
@@ -127,7 +127,7 @@ You should calculate both Angle of Incidence and Specular lighting effects when 
 The diagram below illustrates the different results of flat, Gouraud and Phong shading. Again, all three spheres have exactly the same geometry and number of triangles. It is just the alternative rendering approaches that make them appear different.  
 
 
-![](07%20Phong%20Shading/images/phong.jpg)
+![](07%20Phong%20Shading%2047.34/images/phong.jpg)
 
 # 
 ### End of workbook
